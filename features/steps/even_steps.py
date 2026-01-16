@@ -4,9 +4,20 @@ from src.number_checker import check_number
 
 
 # TODO: Implementáld a Given step-et
-@given('the number is 4')
+@given('the number is {number}')
+def step_given_number(context, number):
+    context.number = int(number)
+
+"""
+@given('the number is 3')
 def step_given_number(context):
-    context.number = 4
+    context.number = 3
+
+@given('the number is 0')
+def step_given_number(context):
+    context.number = 0
+ˇ"""
+
 
 
 # TODO: Implementáld a When step-et
@@ -20,3 +31,6 @@ def step_when_check_number(context):
 @then('I should told "{expected}"')
 def step_then_result(context, expected):
     assert context.result == expected, f'Elvárt érték: "{expected}", de a kapott érték: "{context.result}"'
+    
+
+

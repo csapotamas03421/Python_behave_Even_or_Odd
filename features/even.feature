@@ -10,4 +10,39 @@ Feature: Páros szám ellenőrzése
   Scenario: Páros szám ellenőrzése
     Given the number is 4
     When I check the number
-    Than I should told "even"
+    Then I should told "even"
+
+
+
+
+  Scenario: Páratlan szám ellenörzése
+    Given the number is 3
+    When I check the number
+    Then I should told "odd"
+
+
+
+  Scenario: Nulla ellenőrzése
+    Given the number is 0
+    When I check the number
+    Then I should told "even"
+
+
+
+  Scenario: Negatív páros szám ellenőrzése
+    Given the number is -4
+    When I check the number
+    Then I should told "even"
+
+
+
+
+  Scenario: Negatív páratlan szám ellenőrzése
+    Given the number is -5
+    When I check the number
+    Then I should told "odd"
+
+
+    
+
+
